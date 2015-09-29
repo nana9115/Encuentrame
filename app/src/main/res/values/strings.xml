@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">EncuentrameApp</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="login_txt">Iniciar Sesion</string>
+    <string name="login_btn">Entrar</string>
+    <string name="title_activity_root">RootActivity</string>
+    <string name="login_usr">Usuario</string>
+    <string name="login_pass">Password</string>
+    <string name="main_btn">Cerrar Sesion</string>
+    <string name="title_activity_splash_screen">SplashScreenActivity</string>
+</resources>
