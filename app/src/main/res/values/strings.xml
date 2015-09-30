@@ -5,10 +5,15 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="login_txt">Iniciar Sesion</string>
-    <string name="login_btn">Entrar</string>
+    <string name="login_btn">Ingresar</string>
     <string name="title_activity_root">RootActivity</string>
     <string name="login_usr">Usuario</string>
-    <string name="login_pass">Password</string>
+    <string name="login_pass">Contraseña</string>
     <string name="main_btn">Cerrar Sesion</string>
     <string name="title_activity_splash_screen">SplashScreenActivity</string>
+    <string name="title_activity_login2">Login2Activity</string>
+    <string name="login_nombre">Nombres</string>
+    <string name="login_apellido">Apellidos</string>
+    <string name="login_btn2">Registrar</string>
+    <string name="login_btn3">Ingresar con Facebook</string>
 </resources>

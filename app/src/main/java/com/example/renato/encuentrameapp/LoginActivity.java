@@ -20,8 +20,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     public static final String PREFERENCE="preference";
 
-    EditText usr, pass;
-    Button in;
+    EditText usr2, pass2;
+    Button in3;
 
     SharedPreferences preferences;
     SharedPreferences.Editor editor;
@@ -31,12 +31,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        usr = (EditText) findViewById(R.id.usr);
-        pass = (EditText) findViewById(R.id.pass);
+        usr2 = (EditText) findViewById(R.id.usr2);
+        pass2 = (EditText) findViewById(R.id.pass2);
 
-        in = (Button) findViewById(R.id.btn);
+        in3 = (Button) findViewById(R.id.btn1);
 
-        in.setOnClickListener(this);
+        in3.setOnClickListener(this);
 
         preferences = getSharedPreferences(PREFERENCE,MODE_PRIVATE);
         editor =preferences.edit();
@@ -47,7 +47,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View v) {
         editor.putBoolean(KEY_LOGIN, true);
-        editor.putString(KEY_USER, usr.getText().toString());
+        editor.putString(KEY_USER, usr2.getText().toString());
         editor.commit();
 
         Intent intent = new Intent(this, MainActivity.class);
