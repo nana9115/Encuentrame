@@ -23,8 +23,8 @@ public class Login2Activity extends AppCompatActivity implements View.OnClickLis
     EditText usr1, pass1;
     Button in1, in2;
 
-    SharedPreferences preferences1, preferences2;
-    SharedPreferences.Editor editor1, editor2;
+    SharedPreferences preferences;
+    SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,32 +40,37 @@ public class Login2Activity extends AppCompatActivity implements View.OnClickLis
         in1.setOnClickListener(this);
         in2.setOnClickListener(this);
 
-        preferences1 = getSharedPreferences(PREFERENCE,MODE_PRIVATE);
-        editor1 =preferences1.edit();
-
-        preferences2 = getSharedPreferences(PREFERENCE,MODE_PRIVATE);
-        editor2 =preferences2.edit();
+        preferences = getSharedPreferences(PREFERENCE,MODE_PRIVATE);
+        editor =preferences.edit();
 
     }
 
 
     @Override
     public void onClick(View v) {
-        editor1.putBoolean(KEY_LOGIN, true);
-        editor1.putString(KEY_USER, usr1.getText().toString());
-        editor1.commit();
 
-        Intent intent1 = new Intent(this, MainActivity.class);
-        startActivity(intent1);
-        finish();
+        switch (v.getId()){
 
-        editor2.putBoolean(KEY_LOGIN, true);
-        editor2.putString(KEY_USER, usr1.getText().toString());
-        editor2.commit();
+            case R.id.btn1:
 
-        Intent intent2 = new Intent(this, LoginActivity.class);
-        startActivity(intent2);
-        finish();
+                editor.putBoolean(KEY_LOGIN, true);
+                editor.putString(KEY_USER, usr1.getText().toString());
+                editor.commit();
+
+                Intent intent1 = new Intent(this, MainActivity.class);
+                startActivity(intent1);
+
+
+            break;
+
+            case R.id.btn2:
+
+                Intent intent2 = new Intent(this, LoginActivity.class);
+                startActivity(intent2);
+
+
+           break;
+        }
     }
 
 

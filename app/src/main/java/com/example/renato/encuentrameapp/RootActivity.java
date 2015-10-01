@@ -16,7 +16,9 @@ public class RootActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         SharedPreferences preferences = getSharedPreferences(LoginActivity.PREFERENCE, MODE_PRIVATE);
+
         boolean login = preferences.getBoolean(LoginActivity.KEY_LOGIN, false);
         Intent intent = null;
 

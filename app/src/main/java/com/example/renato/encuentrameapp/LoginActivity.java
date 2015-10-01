@@ -34,7 +34,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         usr2 = (EditText) findViewById(R.id.usr2);
         pass2 = (EditText) findViewById(R.id.pass2);
 
-        in3 = (Button) findViewById(R.id.btn1);
+        in3 = (Button) findViewById(R.id.btn3);
 
         in3.setOnClickListener(this);
 
@@ -46,12 +46,15 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View v) {
-        editor.putBoolean(KEY_LOGIN, true);
-        editor.putString(KEY_USER, usr2.getText().toString());
-        editor.commit();
 
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
+        switch (v.getId()){
+            case R.id.btn3:
+
+                Intent intent1 = new Intent(this, MainActivity.class);
+                startActivity(intent1);
+
+            break;
+
+        }
     }
 }
